@@ -1,0 +1,89 @@
+<html>
+  <head>
+  <title> Survey for Ecommerce</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Education', 'Number'],
+          ['High School',3],
+          ['Some College',6],
+          ['College Graduate',  13],
+          ['Graduate School', 8]
+        ]);
+
+        var options = {
+          title: 'Education Level',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+  <h1> 30 People's Survey For Popularity of Ecommerce Websites</h1>
+  <h3>a. How many have purchased an item online?</h3>
+  <p> After surveying 30 people. I found out that 20 of them purchased at least once in a life. </p>
+  <h3>b. How many have shopped but not purchased online?</h3>
+  <p> 10 of them have shopped but never purchased online </p>
+  <h3>c. Gender?</h3>
+  <p>18 are males. 12 are females</p>
+  <h3>d. How many purchase online once a year? Once a month? Once a week?</h3>
+  <p>As I Mentioned 20 of them purchase online. Out of those 20 participants. 11 people buy once a week. 5 buy once a month and 3 people buy once a year</p>
+<picture>
+  <img src="donut chart.png" alt="Chart" style="width:auto;">
+</picture>
+ <h3>e. Favorite Ecommerce Website?</h3>
+<picture>
+  <img src="bar chart.png" alt="Bar Chart" style="width:auto;">
+</picture>
+<h3>f. Education Level?</h3>
+<p>High School - 3 people</p>
+<p>Some College - 6 people</p>
+<p>College Graduate  - 13 people</p>
+<p>Graduate School - 7 people</p>
+
+
+
+  
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+<div id="piechart"></div>
+<h3>g. Ages?</h3>
+<p>Out of these 30 people that respond to survey.The ages range differently.</p>
+<p>From Age 18 to 25 years old - 15 people</p>
+<p>From Age 26 to 36 years old - 9 people</p>
+<p>From Age 40 to 50 years old - 4 people</p>
+<p>Above 50 - 2 people</p>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Ages', 'Number'],
+  ['18-25', 15],
+  ['26-36', 9],
+  ['40-50', 4],
+  ['Above 50', 2]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Ages of People', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+<button><a href="mailto:shahaarij5@gmail.com">Email Me</a></button>
+</body>
+</html>
